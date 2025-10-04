@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bulb Toggle</title>
+<style>
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+  }
+  #bulb {
+    width: 150px;
+    height: 250px;
+    background: gray;
+    border-radius: 75px 75px 50px 50px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px #444;
+    transition: background 0.3s ease;
+  }
+  #bulb::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+    background: #666;
+    border-radius: 10px 10px 0 0;
+  }
+  #bulb.on {
+    background: yellow;
+    box-shadow: 0 0 30px 10px yellow;
+  }
+</style>
+</head>
+<body>
+
+<div id="bulb" title="Tap to toggle"></div>
+
+<script>
+  const bulb = document.getElementById('bulb');
+  bulb.addEventListener('click', () => {
+    bulb.classList.toggle('on');
+  });
+</script>
+
+</body>
+</html>

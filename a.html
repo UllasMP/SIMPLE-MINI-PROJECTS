@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        border: 2px solid white;
+       
+    }
+    h1{
+        color: aliceblue;
+        text-align: center;
+    }
+    #label{
+        color: aliceblue;
+        display: block;
+        text-align: center;
+        font-size: 10em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container{
+        text-align: center;
+    }
+
+    .btns{
+        padding: 10px 20px;
+        font-size: large;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(184, 247, 247);;
+        transition: background-color 0,25s;
+    }
+    h3{
+         color: aliceblue;
+        text-align: center;
+        font-size: small;
+
+    }
+
+
+    .btns:hover{
+        background-color: rgb(3, 81, 81);
+    }
+</style>
+<body>
+    <h1>Counter</h1>
+
+    <label id="label">0</label>
+
+    <div class="container">
+        <button id="decbtn" class="btns">Decrease</button>
+        <button id="resetbtn" class="btns">Reset</button>
+        <button id="incbtn" class="btns">Increase</button>
+    </div>
+    <footer>
+        <h3>BY ULLAS MP</h3>
+    </footer>
+    
+
+    <script>
+        let inc=document.getElementById("incbtn");
+        let reset=document.getElementById("resetbtn");
+        let dec=document.getElementById("decbtn");
+        let count=0;
+        let label=document.getElementById("label");
+
+
+        inc.onclick=function(){
+            count++;
+            label.textContent=(count);
+
+        }
+          dec.onclick=function(){
+            count--;
+            label.textContent=(count);
+
+        }
+          reset.onclick=function(){
+            count=0;
+            label.textContent=(count);
+
+        }
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
